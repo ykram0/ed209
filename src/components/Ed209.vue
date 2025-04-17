@@ -18,7 +18,7 @@
         <p :class="[tier.featured ? 'text-gray-300' : 'text-gray-600', 'mt-6 text-base/7']">{{ tier.description }}</p>
         <ul role="list" :class="[tier.featured ? 'text-gray-300' : 'text-gray-600', 'mt-8 space-y-3 text-sm/6 sm:mt-10']">
           <li v-for="feature in tier.features" :key="feature" class="flex gap-x-3">
-            
+            <CheckIcon :class="[tier.featured ? 'text-indigo-400' : 'text-indigo-600', 'h-6 w-5 flex-none']" aria-hidden="true" />  
             {{ feature }}
           </li>
         </ul>
@@ -29,6 +29,8 @@
 </template>
 
 <script setup>
+
+import { CheckIcon } from '@heroicons/vue/20/solid'
 
 
 const tiers = [
